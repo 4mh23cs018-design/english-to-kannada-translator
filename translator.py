@@ -122,8 +122,8 @@ Examples:
         '''
     )
     parser.add_argument('--serve', action='store_true', help='Start Flask web server')
-    parser.add_argument('--host', default='127.0.0.1', help='Server host (default: 127.0.0.1)')
-    parser.add_argument('--port', type=int, default=5000, help='Server port (default: 5000)')
+    parser.add_argument('--host', default='0.0.0.0', help='Server host (default: 0.0.0.0)')
+    parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', 5000)), help='Server port')
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     
     group = parser.add_mutually_exclusive_group()
