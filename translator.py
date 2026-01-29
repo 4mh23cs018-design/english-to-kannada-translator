@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-c"""
+"""
 English to Kannada Translator
 Supports both CLI and Flask web interface
 """
