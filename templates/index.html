@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English → Kannada Translator</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>English → Kannada Translator</h1>
+
+      <form method="post">
+        <label for="text">Enter English text</label>
+        <textarea id="text" name="text" rows="6">{{ source_text }}</textarea>
+        <button type="submit">Translate</button>
+      </form>
+
+      {% if error %}
+        <div class="error">{{ error }}</div>
+      {% endif %}
+
+      {% if translated %}
+        <div class="result">
+          <h2>Kannada translation</h2>
+          <div class="translated">{{ translated }}</div>
+        </div>
+      {% endif %}
+
+      <footer>
+        <small>Powered by deep-translator (Google)</small>
+      </footer>
+    </div>
+  </body>
+</html>
